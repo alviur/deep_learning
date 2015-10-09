@@ -15,7 +15,6 @@ layer {
     stride: 1
   }
 }
-
 layer {
   name: "pool1"
   type: "Pooling"
@@ -27,7 +26,6 @@ layer {
     stride: 2
   }
 }
-
 layer {
   name: "ip2"
   type: "InnerProduct"
@@ -37,10 +35,9 @@ layer {
     num_output: 10
   }
 }
-
 layer {
-  name: "loss"
+  name: "prob"
   type: "Softmax"
   bottom: "ip2"
-  top: "loss"
+  top: "prob"
 }
