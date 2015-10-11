@@ -9,9 +9,11 @@ layer {
   }
   transform_param {
     scale: 0.00390625
+    mirror: true
+    crop_size: 90	
   }
   data_param {
-    source: "/home/lex/2_SISTEMIC/9_Deep_Learning/1_Datasets/1_Microalgas/microalgas_train_4Classes_lmdb"
+    source: "/home/lex/2_SISTEMIC/9_Deep_Learning/1_Datasets/1_Microalgas/grayBalanceado/microalgas_train_Balanceado_lmdb"
     batch_size: 64
     backend: LMDB
   }
@@ -26,9 +28,11 @@ layer {
   }
   transform_param {
     scale: 0.00390625
+    mirror: true
+    crop_size: 90
   }
   data_param {
-    source: "/home/lex/2_SISTEMIC/9_Deep_Learning/1_Datasets/1_Microalgas/microalgas_val_4Classes_lmdb"
+    source: "/home/lex/2_SISTEMIC/9_Deep_Learning/1_Datasets/1_Microalgas/gray/microalgas_val_lmdb"
     batch_size: 100
     backend: LMDB
   }
@@ -82,7 +86,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 10
+    num_output: 4
     weight_filler {
       type: "xavier"
     }

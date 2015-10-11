@@ -9,9 +9,11 @@ layer {
   }
   transform_param {
     scale: 0.00390625
+    mirror: true
+    crop_size: 90	
   }
   data_param {
-    source: "/home/lex/2_SISTEMIC/9_Deep_Learning/1_Datasets/1_Microalgas/gray/microalgas_train_lmdb"
+    source: "/home/lex/2_SISTEMIC/9_Deep_Learning/1_Datasets/1_Microalgas/grayBalanceado/microalgas_train_Balanceado_lmdb"
     batch_size: 64
     backend: LMDB
   }
@@ -26,7 +28,9 @@ layer {
   }
   transform_param {
     scale: 0.00390625
-  }
+    mirror: true
+    crop_size: 90
+  } learn 96 filters
   data_param {
     source: "/home/lex/2_SISTEMIC/9_Deep_Learning/1_Datasets/1_Microalgas/gray/microalgas_val_lmdb"
     batch_size: 100
@@ -43,7 +47,7 @@ layer {
   }
   param {
     lr_mult: 2
-  }
+  } learn 96 filters
   convolution_param {
     num_output: 20
     kernel_size: 5

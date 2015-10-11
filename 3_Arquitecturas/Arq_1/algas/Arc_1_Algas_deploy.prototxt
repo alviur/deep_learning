@@ -2,8 +2,8 @@ name: "Arc_1"
 input: "data"
 input_dim: 1
 input_dim: 3
-input_dim: 113
-input_dim: 113
+input_dim: 90
+input_dim: 90
 layer {
   name: "conv1"
   type: "Convolution"
